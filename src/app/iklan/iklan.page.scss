@@ -1,0 +1,48 @@
+/* CSS untuk efek highlight pada foto */
+.highlight-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Warna overlay saat tidak di-hover */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.highlight-image:hover::before {
+  opacity: 1; /* Efek overlay saat hover */
+}
+
+.highlight-image img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.highlight-image:hover img {
+  transform: scale(1.05); /* Efek zoom-in saat hover */
+}
+/* CSS untuk style tombol login */
+.btn-login {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  border: 2px solid #007bff; /* Warna border tombol */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-login:hover {
+  background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+  border-color: #0056b3; /* Warna border tombol saat hover */
+  color: #fff; /* Warna teks tombol saat hover */
+}
